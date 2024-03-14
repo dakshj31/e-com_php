@@ -1,6 +1,8 @@
 <?php require_once("../resources/config.php"); 
 
  include "../resources/templates/front/header.php"; ?>
+ 
+ 
 
     <!-- Page Content -->
     <div class="container">

@@ -1,6 +1,5 @@
 <?php require_once("../resources/config.php"); 
-require_once("cart.php"); 
-
+include "../resources/cart.php";
  include "../resources/templates/front/header.php"?>
 
     <!-- Page Content -->

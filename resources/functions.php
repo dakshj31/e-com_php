@@ -73,7 +73,7 @@ function get_products() {
         <h4><a href="item.php?id={$row['product_id']}">{$row['product_title']}</a>
         </h4>
         <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-        <a class="btn btn-primary" target="_blank" href="cart.php?add={$row['product_id']}">Add to Cart</a>
+        <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">Add to Cart</a>
     </div>
     
 </div>
@@ -170,7 +170,7 @@ function login_user() {
             set_message("Your Password or Username are wrong");
             redirect("login.php");
         } else {
-            set_message("Welcome to Admin {$username} ");
+            $_SESSION['username'] = $username;
             redirect("admin");
         }
     }
