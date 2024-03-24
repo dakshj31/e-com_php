@@ -3,7 +3,7 @@ require_once("../resources/cart.php");
  include "../resources/templates/front/header.php"?>
 
 <?php 
-    report();
+    process_transaction();
 ?>
 
     <!-- Page Content -->
