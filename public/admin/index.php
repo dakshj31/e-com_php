@@ -43,6 +43,16 @@
                     include "../../resources/templates/back/add_product.php";
                 }
 
+                if(isset($_GET['edit_product'])) {
+
+                    include "../../resources/templates/back/edit_product.php";
+                }
+
+                // if(isset($_GET['users'])) {
+
+                //     include "../../resources/templates/back/users.php";
+                // }
+
                 
 
                 ?>
