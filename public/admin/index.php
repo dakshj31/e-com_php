@@ -48,10 +48,15 @@
                     include "../../resources/templates/back/edit_product.php";
                 }
 
-                // if(isset($_GET['users'])) {
+                if(isset($_GET['users'])) {
 
-                //     include "../../resources/templates/back/users.php";
-                // }
+                    include "../../resources/templates/back/users.php";
+                }
+
+                if(isset($_GET['add_user'])) {
+
+                    include "../../resources/templates/back/add_user.php";
+                }
 
                 
 
