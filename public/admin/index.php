@@ -58,6 +58,11 @@
                     include "../../resources/templates/back/add_user.php";
                 }
 
+                if(isset($_GET['reports'])) {
+
+                    include "../../resources/templates/back/reports.php";
+                }
+
                 
 
                 ?>
