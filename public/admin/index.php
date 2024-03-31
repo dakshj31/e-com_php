@@ -63,6 +63,11 @@
                     include "../../resources/templates/back/reports.php";
                 }
 
+                if(isset($_GET['slides'])) {
+
+                    include "../../resources/templates/back/slides.php";
+                }
+
                 
 
                 ?>

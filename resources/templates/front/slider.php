@@ -5,12 +5,8 @@
                                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
+                                <?php get_active_slide(); ?>
+                                <?php get_slides(); ?>
                                 <div class="item">
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
