@@ -58,6 +58,11 @@
                     include "../../resources/templates/back/add_user.php";
                 }
 
+                // if(isset($_GET['delete_users'])) {
+
+                //     include "../../resources/templates/back/delete_users.php";
+                // }
+
                 if(isset($_GET['reports'])) {
 
                     include "../../resources/templates/back/reports.php";
@@ -66,6 +71,11 @@
                 if(isset($_GET['slides'])) {
 
                     include "../../resources/templates/back/slides.php";
+                }
+
+                if(isset($_GET['delete_slide_id'])) {
+
+                    include "../../resources/templates/back/delete_slide.php";
                 }
 
                 

@@ -542,13 +542,21 @@ function add_slides() {
         $slide_image = escape_string($_FILES['file']['name']);
         $slide_image_loc = escape_string($_FILES['file']['tmp_name']);
 
-        if(empty($slide_title) || empty($slide_imge)) {
+        if(empty($slide_title) || empty($slide_image) ) {
 
             echo "<p class='bg-danger'>This feild cannot be empty<p/>";
 
         } else {
 
             move_uploaded_file($slide_image_loc, UPLOAD_DIRECTORY . DS . $slide_image);
+            // move_uploaded_file($slide_image_loc, UPLOAD_DIRECTORY . DS . $slide_image);
+
+            $query = query("INSERT INTO slides(slide_title, slide_image) VALUES('{$slide_title}', '{$slide_image}' )");
+
+            confirm($query);
+            set_message("Slide Added");
+            redirect("index.php?slides");
+
 
         }
 
@@ -556,7 +564,25 @@ function add_slides() {
 
 }
 
-function get_current_slide() {
+function get_current_slide_in_admin() {
+
+    $query = query("SELECT * FROM slides ORDER BY slide_id DESC LIMIT 1");
+    confirm($query);
+
+    while($row = fetch_array($query)) {
+
+        $slide_image = display_images($row['slide_image']);
+
+        $slide_active = <<<DELIMETER
+
+            
+                 <img class="img-responsive" src="../../resources/{$slide_image}" alt="">
+            
+
+        DELIMETER;
+
+        echo $slide_active;
+    }
 
 }
 
@@ -605,7 +631,30 @@ function get_slides() {
 
 }
 
-function get_slide_thumbnail() {
+function get_slide_thumbnails() {
+
+    $query = query("SELECT * FROM slides ORDER BY slide_id ASC");
+    confirm($query);
+    while($row = fetch_array($query)) {
+
+        $slide_image = display_images($row['slide_image']);
+
+        $slide_thumb_admin = <<<DELIMETER
+
+        <div class="col-xs-6 col-md-3">
+
+            <a href="index.php?delete_slide_id={$row['slide_id']}">
+            <img class="slide-responsive slide_image" src="../../resources/{$slide_image}" alt="">
+            </a>
+  
+        </div>
+        <br>
+        
+        
+        DELIMETER;
+
+        echo $slide_thumb_admin;
+    }
 
 
 }
