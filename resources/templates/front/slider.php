@@ -7,9 +7,9 @@
                             <div class="carousel-inner">
                                 <?php get_active_slide(); ?>
                                 <?php get_slides(); ?>
-                                <div class="item">
+                                <!-- <div class="item">
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
+                                </div> -->
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>

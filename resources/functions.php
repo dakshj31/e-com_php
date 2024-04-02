@@ -78,7 +78,7 @@ function get_products() {
 
 <div class="col-sm-4 col-lg-4 col-md-4">
 <div class="thumbnail">
-<a href="item.php?id={$row['product_id']}"><img src="../resources/{$product_image}" alt=""></a>
+<a href="item.php?id={$row['product_id']}"><img style="height:90px;" src="../resources/{$product_image}" alt=""></a>
     <div class="caption">
         <h4 class="pull-right">&#8377;{$row['product_price']}</h4>
         <h4><a href="item.php?id={$row['product_id']}">{$row['product_title']}</a>
@@ -597,7 +597,7 @@ function get_active_slide() {
         $slide_active = <<<DELIMETER
 
             <div class="item active" >
-                 <img class="slide-image" src="../resources/{$slide_image}" alt="" width="20" height="10">
+                 <img style="height:450px" class="slide-image" src="../resources/{$slide_image}" alt="" width="20" height="10">
             </div>
 
         DELIMETER;
@@ -620,7 +620,7 @@ function get_slides() {
         $slides = <<<DELIMETER
 
             <div class="item">
-                 <img class="slide-image" src="../resources/{$slide_image}" alt="">
+                 <img style="height:450px" class="slide-image" src="../resources/{$slide_image}" alt="">
             </div>
 
         DELIMETER;
@@ -641,13 +641,18 @@ function get_slide_thumbnails() {
 
         $slide_thumb_admin = <<<DELIMETER
 
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-md-3 image_container">
 
             <a href="index.php?delete_slide_id={$row['slide_id']}">
             <img class="slide-responsive slide_image" src="../../resources/{$slide_image}" alt="">
             </a>
   
+            <div class="caption">
+            <p>{$row['slide_title']}</p>
+            </div>
+
         </div>
+ 
         <br>
         
         

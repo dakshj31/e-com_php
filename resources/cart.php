@@ -54,7 +54,7 @@ foreach ($_SESSION as $name => $value) {
 
         if(substr($name, 0, 8) == "product_") {
 
-            $length = strlen($name) - 8;
+            $length = strlen($name);
 
             $id = substr($name, 8 , $length);
 
