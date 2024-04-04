@@ -27,7 +27,7 @@
                 <div class="row">
 
 
-                <?php get_products(); ?>
+                <?php get_products_with_pagination($perPage = 3); ?>
                    
             
                     <div class="col-sm-4 col-lg-4 col-md-4">
